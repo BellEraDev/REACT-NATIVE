@@ -6,6 +6,7 @@ const MainTab = () => {
   Promise.all([
     Icon.getImageSource('create-outline', 30),
     Icon.getImageSource('menu-outline', 30),
+    Icon.getImageSource('calculator-outline', 30),
   ]).then((icons) => {
     Navigation.setRoot({
       root: {
@@ -29,7 +30,7 @@ const MainTab = () => {
                           icon: icons[0],
                           iconColor: 'skyblue',
                           selectedIconColor: 'blue',
-                          selectedTextColor: 'skyblue',
+                          // selectedTextColor: 'skyblue',
                         },
                       },
                     },
@@ -38,7 +39,7 @@ const MainTab = () => {
               },
             },
             {
-              // Screen 3
+              // Screen 2
               stack: {
                 children: [
                   {
@@ -52,9 +53,34 @@ const MainTab = () => {
                         },
                         bottomTab: {
                           icon: icons[1],
-                          iconColor: 'pink',
-                          selectedIconColor: 'red',
-                          selectedTextColor: 'pink',
+                          iconColor: 'skyblue',
+                          selectedIconColor: 'blue',
+                          // selectedTextColor: 'pink',
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              // Screen 3
+              stack: {
+                children: [
+                  {
+                    component: {
+                      name: 'CalApp',
+                      options: {
+                        topBar: {
+                          title: {
+                            text: 'Calculator',
+                          },
+                        },
+                        bottomTab: {
+                          icon: icons[2],
+                          iconColor: 'skyblue',
+                          selectedIconColor: 'blue',
+                          // selectedTextColor: 'pink',
                         },
                       },
                     },

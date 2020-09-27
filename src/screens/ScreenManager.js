@@ -3,6 +3,7 @@ import SplashScreen from './SplashScreen';
 import FirstScreen from './FirstScreen';
 import ThirdScreen from './ThirdScreen';
 import InfoScreen from './InfoScreen';
+import CalApp from './CalApp';
 import configureStore from '../store/configureStore';
 import {Provider} from 'react-redux';
 import React from 'react';
@@ -10,6 +11,8 @@ import React from 'react';
 const store = configureStore();
 
 Navigation.registerComponent('MySplashScreen', () => SplashScreen);
+
+Navigation.registerComponent('CalApp', () => CalApp);
 
 Navigation.registerComponent(
   'FirstScreen',
